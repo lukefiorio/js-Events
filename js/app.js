@@ -74,7 +74,21 @@ function addBeets() {
 
 // Use this for the new image:
 // 'https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif'
+// original img:
+// 'https://bit.ly/2RhOvm4'
 
+//var imgPuggy = document.getElementById('puggy');
+
+puggy.addEventListener('mouseover',hoverImg);
+puggy.addEventListener('mouseout',defaultImg);
+
+function hoverImg() {
+    puggy.src = "https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif";
+}
+
+function defaultImg() {
+    puggy.src = "https://bit.ly/2RhOvm4"
+}
 
 
 //6. DevLeague Lunch Wagon
