@@ -114,6 +114,35 @@ var grimace = {
     hobbies: ['knitting', 'scrapbooking', 'mixed martial arts']
 };
 
+var nameBox = document.createElement('li');
+nameBox.className = 'gName';
+nameBox.innerHTML = "Name: "+grimace.name;
+
+var ageBox = document.createElement('li');
+ageBox.className = 'gAge';
+ageBox.innerHTML = "Age: "+grimace.age;
+
+var signBox = document.createElement('li');
+signBox.className = 'gSign';
+signBox.innerHTML = "Sign: "+grimace.sign;
+
+var bloodBox = document.createElement('li');
+bloodBox.className = 'gBlood';
+bloodBox.innerHTML = "Blood Type: "+grimace.bloodtype;
+
+var hobbiesBox = document.createElement('li');
+hobbiesBox.className = 'gHobbies';
+hobbiesBox.innerHTML = "Hobbies: "+grimace.hobbies;
+
+bio.addEventListener('click',addProfile);
+
+function addProfile() {
+    bio.appendChild(nameBox);
+    bio.appendChild(ageBox);
+    bio.appendChild(signBox);
+    bio.appendChild(bloodBox);
+    bio.appendChild(hobbiesBox);
+}
 
 //8. Fortune Cookie
 /*Add an event listener to the `fortune` button that will generate a random message in the `showFortune` h3 element after clicking on the button*/
