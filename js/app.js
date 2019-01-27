@@ -8,13 +8,29 @@ The function will add the following content inside the paragraph with the id of 
 
 var bliss = "Let's put some happy little bushes on the other side now. Anything you want to do you can do here. Trees cover up a multitude of sins. If you don't like it - change it. It's your world. Maybe there's a happy little waterfall happening over here."
 
+// not necessary since it's already embedded within the html.
+//happy.addEventListener('click', moreTrees);
+
+function moreTrees() {
+    nirvana.innerHTML = bliss;
+}
 
 //2. Less is More
 /*Create a function named `lessContent` that will invoke the function after clicking on the button.
 
 The function will hide the contents in the pargraph with the id of `less`.*/
 
+//noMore.addEventListener('click', lessContent);
 
+console.log(less.style.display);
+
+function lessContent() {
+    if (less.style.display !== 'none') {
+        less.style.display = 'none';
+    } else {
+        less.style.display = 'block';
+    }
+}
 
 //3. Edward (エドワード)
 /*Create a function named `bling` that will change the text in the paragraph of `worm` after hovering over it. Use the style guide below.
