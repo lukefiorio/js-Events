@@ -56,6 +56,17 @@ function bling() {
 
 var missing = "1 Big ol' beet";
 
+var classMix = document.getElementsByClassName('mix');
+
+var newIngredient = document.createElement('li');
+newIngredient.id = 'beets';
+newIngredient.innerHTML = missing;
+
+recipe.addEventListener('click',addBeets);
+
+function addBeets() {
+    classMix[classMix.length-1].appendChild(newIngredient);
+}
 
 
 //5. Pug Life
