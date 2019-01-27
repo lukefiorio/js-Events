@@ -22,7 +22,6 @@ The function will hide the contents in the pargraph with the id of `less`.*/
 
 //noMore.addEventListener('click', lessContent);
 
-console.log(less.style.display);
 
 function lessContent() {
     if (less.style.display !== 'none') {
@@ -42,7 +41,15 @@ border: 3px dotted rosybrown
 padding: 10px
 */
 
+// embedded in the HTML.
+//worm.addEventListener('onmousemove',bling);
 
+function bling() {
+    worm.style.fontSize = "28px";
+    worm.style.color = "#33cc33";
+    worm.style.border = '3px dotted rosybrown';
+    worm.style.padding = '10px';
+}
 
 //4. Beet Cakes by Dre
 /*Add an event listener to the `recipe` button that will display the missing ingredient in the paragraph of `ingredient` after clicking on the button*/
