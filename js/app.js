@@ -96,10 +96,10 @@ function defaultImg() {
 menu.addEventListener('click',showDessert);
 
 function showDessert() {
-    if (dessert.style.display !=='none') {
-        dessert.style.display = 'none';
-    } else {
+    if (dessert.style.display ==='none' || dessert.style.display === '') {
         dessert.style.display = 'block';
+    } else {
+        dessert.style.display = 'none';
     }
 }
 
@@ -162,3 +162,8 @@ function chooseRandFortune() {
 //9. Open Sesame
 /*Add an event listener to the `secret` input element that will capitalize letter inputs in the form. Hint, you'll be using the keyup event*/
 
+secret.addEventListener('keyup',upperCase);
+
+function upperCase() {
+    secret.style.textTransform = "uppercase";
+}
