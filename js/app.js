@@ -132,7 +132,7 @@ bloodBox.innerHTML = "Blood Type: "+grimace.bloodtype;
 
 var hobbiesBox = document.createElement('li');
 hobbiesBox.className = 'gHobbies';
-hobbiesBox.innerHTML = "Hobbies: "+grimace.hobbies;
+hobbiesBox.innerHTML = "Hobbies: "+grimace.hobbies.join(', ');
 
 bio.addEventListener('click',addProfile);
 
@@ -151,6 +151,7 @@ var messages = ["That wasn't chicken.", "The fortune you seek is in another cook
 
 fortune.addEventListener('click',chooseRandFortune);
 
+/*
 var randFortune = document.createElement('div');
 randFortune.id = 'newRandFortune';
 
@@ -158,6 +159,14 @@ function chooseRandFortune() {
     randFortune.innerHTML = messages[Math.floor(Math.random()*messages.length)];
     showFortune.appendChild(randFortune);
 }
+*/
+
+// more efficient solution since the h3 'showFortune' element already exists.
+function chooseRandFortune() {
+    showFortune.innerHTML = messages[Math.floor(Math.random()*messages.length)];
+}
+
+
 
 //9. Open Sesame
 /*Add an event listener to the `secret` input element that will capitalize letter inputs in the form. Hint, you'll be using the keyup event*/
